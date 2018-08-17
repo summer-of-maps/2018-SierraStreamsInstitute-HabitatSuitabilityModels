@@ -12,7 +12,7 @@ library(scales)
 library(fasterize)
 
 #read in config file
-test_config <- read_csv("CONFIG_SCALED.csv")
+test_config <- read_csv("FINAL_SUITABILITY_MODELING_CONFIG.csv")
 
 list_rasters=list()
 
@@ -21,12 +21,6 @@ projection <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
 e <- extent(-121.27, -120.4, 37.3, 38.3)
 
 #for loop that extracts csv line for each species
-
-  s <- test_config$species[1]
-  
-  cf2 <- test_config %>% filter(species == s)
-  
-  print(cf2)
   
   #process for VARIABLE 2 - VEGETATION COMMUNITY
     #read in spatial data
