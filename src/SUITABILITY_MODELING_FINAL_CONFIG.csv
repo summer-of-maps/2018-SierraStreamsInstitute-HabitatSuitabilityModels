@@ -1,0 +1,11 @@
+species,veg_community,elevation_min.tif,elevation_max.tif,slope_min.tif,slope_max.tif,vernal_yesno,canopy_min.tif,canopy_max.tif,landcover,prox_water.tif,prox_roads.tif,prox_dev.tif,prox_agri.tif,precip_min.tif,precip_max.tif,temp_min.tif,temp_max.tif,soildepth.tif,fire_risk.tif,north_slopes.tif,soil_drain.tif,soiltype,sandyloamy_soils,claysilt_soils
+stebbins,"Mixed Chaparral, Blue Oak Woodland, Ponderosa Pine, Valley Oak Woodland",182,1100,NA,NA,NA,0,20,"11, 21, 22, 23, 52, 71, 81",NA,NA,NA,NA,76,140,0,34,80,50,NA,NA,NA,NA,NA
+cantelows,"Mixed Chaparral, Blue Oak Woodland, Douglas-Fir, Evergreen Orchard, Montane Hardwood, Ponderosa Pine, Sierra Mixed Conifer, Valley Oak Woodland",385,1370,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,102,198,1,24,NA,NA,1,NA,"Granitic, Serpentine",NA,NA
+flannelbush,"Mixed Chaparral, Blue Oak Woodland, Valley Oak Woodland",425,1190,NA,NA,NA,0,75,NA,NA,NA,NA,NA,83,140,NA,NA,NA,40,NA,2,"Gabbro, Serpentine",NA,NA
+warbler,"Annual Grassland, Fresh Emergent Wetland, Lacustrine, Valley Foothill Riparian",NA,NA,NA,NA,NA,60,80,"11, 21, 22, 52, 71, 90, 95",100,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+blackbird,"Annual Grassland, Cropland, Fresh Emergent Wetland, Lacustrine, Valley Foothill Riparian",0,250,0,45,NA,0,75,"11, 21, 22, 23, 52, 71, 81, 90, 95",250,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+swallow,NA,0,2000,NA,NA,NA,0,60,"11, 21, 22, 23, 52, 71, 81",100,NA,200,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Y,NA
+turtle,NA,0,1430,0,60,NA,0,40,"11, 21, 22, 23, 52, 71, 81",1000,1000,200,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Y
+snake,"Cropland, Fresh Emergent Wetland, Lacustrine, Valley Foothill Riparian",NA,NA,NA,NA,NA,0,40,NA,250,30,200,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+beaver,"Blue Oak Woodland, Douglas-Fir, Evergreen Orchard, Montane Hardwood, Ponderosa Pine, Sierra Mixed Conifer, Valley Oak Woodland, Valley Foothill Riparian",1190,3080,45,100,NA,10,100,"41, 42, 43, 90, 95",60,1600,NA,1600,100,200,NA,NA,40,NA,1,1,NA,NA,NA
+dwarf,"Annual Grassland, Cropland, Pasture",0,400,NA,NA,Y,NA,NA,NA,100,NA,NA,NA,83,140,3,37,NA,NA,NA,NA,NA,NA,NA
