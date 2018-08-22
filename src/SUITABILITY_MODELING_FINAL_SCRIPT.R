@@ -14,11 +14,12 @@ library(fasterize)
 #read in config file
 config <- read_csv("SUITABILITY_MODELING_FINAL_CONFIG.csv")
 
+#set up empty list to be filled with results through a for loop
 list_rasters=list()
 
+#set up parameters of projection and projection parameters
 projection <- "+proj=aea +lat_1=34 +lat_2=40.5 +lat_0=0 +lon_0=-120 +x_0=0 +y_0=-4000000
 + +datum=NAD83 +units=m +no_defs +ellps=GRS80 +towgs84=0,0,0"
-
 ProjParams <- raster('projection_params.tif')
 
 #for loop that extracts csv line for each species
@@ -26,11 +27,17 @@ for(i in seq_along(test_config$species)){
   
   s <- config$species[i]
   
+  #from config, extract a line for a different species each time through the for loop
   cf2 <- config %>% filter(species == s)
   
   print(cf2)
   
+  #set up reclass parameter to be used later
   ReclassMatrix = matrix( c(0.000001, 10000, 1), nrow=1, ncol=3, byrow=TRUE)
+  
+  #below - for each species loop through the for loop, 
+  ##       a list is created consisting of all variables 
+  ##       with parameters given for that species in the config file
   
   #process for VARIABLE 2 - VEGETATION COMMUNITY
   if (!is.na(cf2$veg_community)){
@@ -681,11 +688,13 @@ for(i in seq_along(test_config$species)){
   
   print(list_rasters)
   
+  #use stack to create a raster stack of the list of rasters created for each variable
   pancakes <- stack(list_rasters)
   prefix = "final_"
-  suffix = "_suit_YAY.tif"
+  suffix = "_suit.tif"
   outname <- paste0(prefix, s, suffix)
   list.final = list("final" = assign(paste0("finalsum_",s), sum(pancakes, na.rm=TRUE)))
+  #write out the final raster to a file in .tif format
   writeRaster(list.final$final, outname, options=c('TFW=YES'), overwrite=TRUE)
 
   
