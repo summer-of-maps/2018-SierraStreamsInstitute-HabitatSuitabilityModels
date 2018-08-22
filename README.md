@@ -7,6 +7,7 @@ This ReadMe has two parts. The first deals with the habitat suitability modeling
 This ReadMe document is designed to allow the user to use and modify the R script "SUITABILITY_MODELING_FINAL_SCRIPT.R" and the associated CSV config file "SUITABILITY_MODELING_FINAL_CONFIG.CSV".
 
 It is designed to produce .tif raster files displaying the habitat suitability of species listed in the config file. The following 10 species native to the Bear River Watershed of California are used as examples throughout.
+
 	1. Stebbins's morning glory
 	2. Cantelow's lewisia
 	3. Pine hill flannelbush
