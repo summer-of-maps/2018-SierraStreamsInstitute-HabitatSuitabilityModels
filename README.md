@@ -1,4 +1,8 @@
-CREATING A HABITAT SUITABILITY MODEL FROM .TIFF RASTER and .SHP VECTOR DATA FOR MULTIPLE SPECIES
+# ReadMe - Using R for Habitat Suitability Modeling and Data Prep for MaxEnt SDM
+
+This ReadMe has two parts. The first deals with the habitat suitability modeling R script and config file, while the second deals with the DataPreparation_ForMaxEnt_SDM_GUI.R file used for species distribution modeling. Both are located in 'src' in this repository. 
+
+### Part 1: CREATING A HABITAT SUITABILITY MODEL FROM .TIFF RASTER and .SHP VECTOR DATA FOR MULTIPLE SPECIES
 
 This ReadMe document is designed to allow the user to use and modify the R script "SUITABILITY_MODELING_FINAL_SCRIPT.R" and the associated CSV config file "SUITABILITY_MODELING_FINAL_CONFIG.CSV".
 
@@ -16,7 +20,7 @@ It is designed to produce .tif raster files displaying the habitat suitability o
 
 *******************************************************************
 
-FILE SETUP
+#### FILE SETUP
 
 Create a folder named SuitMod or similar and place in this folder the SUITABILITY_MODELING_FINAL_* R script and CSV config file.
 
@@ -55,7 +59,7 @@ To run, set up an R project with the SuitMod folder as working directory.
 
 ***************************************************************************
 
-RUNNING THE SCRIPT:
+#### RUNNING THE SCRIPT:
 
 The script depends on the following R packages:
 
@@ -81,81 +85,60 @@ Other than that, the unmodified script should run smoothly. It will take at leas
 
 ***************************************************************************
 
-MODFIYING THE SCRIPT:
+#### MODFIYING THE SCRIPT:
 
-You may wish to modify the script to add additional factors or to change the parameters in the config file for the factors already included, such as elevation or temperature.
+You may wish to modify the script to add additional factors or to change the parameters in the config file for the factors already included, such as elevation or temperature. 
 
-	**To add a factor:**
+##### To add a factor:
 
-		Add an additional column to the config file.
+	Add an additional column to the config file. 
 
-			For factors with raster files, make sure the raster is in a .tif format and name the column the name of the raster.
-			Include the ".tif" extension. Place the file in the SuitMod folder.
+	For factors with raster files, make sure the raster is in a .tif format and name the column the name of the raster. 
+		Include the ".tif" extension. Place the file in the SuitMod folder.
 
-			For factors with vector files, make sure the vector is in a .shp format and name the column the name of the vector.
-			*DO NOT* include the ".shp" extension. Place the file in the DATA FILES folder.
+	For factors with vector files, make sure the vector is in a .shp format and name the column the name of the vector.
+		*DO NOT* include the ".shp" extension. Place the file in the DATA FILES folder.
 
-		Fill in the new config with for parameters for each species.
+	Fill in the new config with for parameters for each species. 
 
-			For numeric parameters, do not include ">" or "<" or similar - just the numbers.
+		For numeric parameters, do not include ">" or "<" or similar - just the numbers.
 
-			For species without parameters for that factor, type "NA", all caps. Do not leave any box in the config blank.
+	For species without parameters for that factor, type "NA", all caps. Do not leave any box in the config blank.
 
-		Save the config file and close.
+	Save the config file and close.
 
-		You must now modify the script itself.
+	You must now modify the script itself.
 
-		For each factor/column of the config file, the script includes a section of code dealing with that factor (column of the config file).
+	For each factor/column of the config file, the script includes a section of code dealing with that factor (column of the config file). 
 
-		You will add a new section for your new factor.
+	You will add a new section for your new factor.
 
-			For raster factors, it is probably easiest to copy and paste the second section (elevation) from the existing script.
+	For raster factors, it is probably easiest to copy and paste the second section (elevation) from the existing script.
+		
+	For vector factors, copy, paste, and modify the vegetation-communities section of the existing script.
 
-			For vector factors, copy, paste, and modify the vegetation-communities section of the existing script.
-
-		Add your new section to the end of the for-loop, and modify the variable names to match your config file.
+	Add your new section to the end of the for-loop, and modify the variable names to match your config file. 
 		Reading the existing script should give you an idea of how a new code block should look.
 
-		Save the script and the new config file and run!
+	Save the script and the new config file and run!
 
-		Do not modify the script outside of the for-loop. It shouldn't be necessary when adding a new factor.
-
-
-	**To change the parameters on existing factors:**
-
-		This is much easier. Just edit the config file, save, and re-run the script in full!
+	Do not modify the script outside of the for-loop. It shouldn't be necessary when adding a new factor.
 
 
-	**To add an additional species:**
+##### To change the parameters on existing factors:
+
+	This is much easier. Just edit the config file, save, and re-run the script in full!
 
 
-		Edit the config file to include an additional row.
+##### To add an additional species:
+	
+	Edit the config file to include an additional row.
 
-		Make sure the species name is a single word in the first column.
+	Make sure the species name is a single word in the first column.
 
-		Add parameters for the new species for each factor for which you have them. For factors not relevant to the species, put NA.
+	Add parameters for the new species for each factor for which you have them. For factors not relevant to the species, put NA. 
 
-		Save the edited config file and run the script again!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	Save the edited config file and run the script again! 
 
 
 
