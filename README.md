@@ -64,21 +64,21 @@ To run, set up an R project with the SuitMod folder as working directory.
 
 The script depends on the following R packages:
 
-raster
-rgdal
-sf
-tidyverse
-fasterize
+	raster
+	rgdal
+	sf
+	tidyverse
+	fasterize
 
 From those scripts, it uses the following libraries:
 
-sf
-raster
-rgdal
-tidyverse
-rgeos
-scales
-fasterize
+	sf
+	raster
+	rgdal
+	tidyverse
+	rgeos
+	scales
+	fasterize
 
 At the top of the script (lines 1-5) is the code to install those packages. If they are not already installed, do so before running the script.
 
