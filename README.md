@@ -47,6 +47,7 @@ Additionally, include raster .tif files in the SuitMod folder. The files below a
 	soil_drain.tif
 
 Within the SuitMod folder, create a folder named "DATA FILES". Inside DATA FILES, place any shapefiles with all associated files. The files below are given as examples:
+
 	veg_community.shp
 	vernal_yesno.shp
 	landcover.shp
